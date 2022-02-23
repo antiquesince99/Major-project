@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Route, Routes} from "react-router-dom"
+import { BrowserRouter, Navigate, Route, Routes} from "react-router-dom"
 import Main from './component/main';
 import Home from './component/main/home';
 import Signup from './component/main/signup';
@@ -24,6 +24,8 @@ function App() {
       <Route element={<Admin/>} path="admin">
         <Route element={<AdminDashboard/>} path="adminDashboard"></Route>
       </Route>
+
+      <Route exact element={<Navigate to="/main/home" />} path="" />
     </Routes>
     </BrowserRouter>
   </>
