@@ -1,10 +1,6 @@
 import Container from "@mui/material/Container";
-// import TextField from "@mui/material/TextField";
-// import AccountCircle from "@mui/icons-material/AccountCircle";
-import { Button, TextField, Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import Swal from "sweetalert2";
-
-// import InputAdornment from "@mui/material/InputAdornment";
 import { Formik } from "formik";
 import { Box } from "@mui/system";
 import app_config from "../../config";
@@ -27,11 +23,7 @@ const Login = () => {
               icon: "success",
               title: "Hurray",
               text: "Logged in Successfully",
-            }).then(() => {
-              window.location.replace("/Addvideo");
-            });
-
-            return;
+            })
           }
         }
 
@@ -77,14 +69,14 @@ const Login = () => {
             <Formik initialvalues={loginform} onSubmit={loginSubmit}>
               {({ values, handleChange, handleSubmit }) => (
                 <form onSubmit={handleSubmit}>
-                  <TextField
+                  <input
                     id="email"
                     label="Email"
                     value={values.email}
                     onChange={handleChange}
                     required
                   />
-                  <TextField
+                  <input
                     id="password"
                     label="password"
                     value={values.password}
@@ -93,7 +85,6 @@ const Login = () => {
                   />
                   <Button
                     variant="text"
-                    color="default"
                     color="secondary"
                     type="submit"
                   >

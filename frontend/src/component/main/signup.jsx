@@ -96,6 +96,7 @@ const Signup = () => {
                     fontSize:"15px",
 
                   }}
+                  type="password"
                 />
                 <Button variant="contained" color="success" type="submit"
                   style={{
