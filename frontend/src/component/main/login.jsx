@@ -13,7 +13,7 @@ const Login = () => {
   };
 
   const loginSubmit = (values) => {
-    fetch(url + "/Login/getbyemail/" + values.email)
+    fetch(url + "/user/getbyemail/" + values.email)
       .then((res) => res.json())
       .then((userdata) => {
         console.log(userdata);
@@ -66,7 +66,7 @@ const Login = () => {
             Login
           </Typography>
           <>
-            <Formik initialvalues={loginform} onSubmit={loginSubmit}>
+            <Formik initialValues={loginform} onSubmit={loginSubmit}>
               {({ values, handleChange, handleSubmit }) => (
                 <form onSubmit={handleSubmit}>
                   <input
@@ -84,7 +84,7 @@ const Login = () => {
                     required
                   />
                   <Button
-                    variant="text"
+                    variant="contained"
                     color="secondary"
                     type="submit"
                   >
