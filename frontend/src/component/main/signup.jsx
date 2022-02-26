@@ -22,7 +22,7 @@ const Signup = () => {
       headers: { "Content-Type": "application/json" },
     };
 
-    fetch(url + "/Login/add", reqOptions)
+    fetch(url + "/user/add", reqOptions)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

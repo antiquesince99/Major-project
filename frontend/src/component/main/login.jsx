@@ -84,7 +84,7 @@ const Login = () => {
                     required
                   />
                   <Button
-                    variant="text"
+                    variant="contained"
                     color="secondary"
                     type="submit"
                   >
