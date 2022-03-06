@@ -1,5 +1,5 @@
 import Container from "@mui/material/Container";
-import { Button, Typography } from "@mui/material";
+import { Button, TextField, Typography } from "@mui/material";
 import Swal from "sweetalert2";
 import { Formik } from "formik";
 import { Box } from "@mui/system";
@@ -25,6 +25,7 @@ const Login = () => {
               text: "Logged in Successfully",
             })
           }
+          return;
         }
 
         Swal.fire({
@@ -51,37 +52,47 @@ const Login = () => {
         <Box
           sx={{
             display: "flex",
-            // justifyContent: 'center',
+            justifyContent: 'center',
             alignItems: "center",
             flexDirection: "column",
             width: 400,
             height: 500,
-            padding: 5,
-            margin: 15,
+            padding: "5px",
+            margin: "auto",
+            
             // border: '2px solid ',
             backdropFilter: "blur(100px)",
           }}
         >
-          <Typography variant="h3" color="initial" style={{ marginBottom: 50 }}>
+          <Typography variant="h3" color="initial" style={{ marginBottom: "10px" , display:"flex" }}>
             Login
           </Typography>
-          <>
+        
             <Formik initialValues={loginform} onSubmit={loginSubmit}>
               {({ values, handleChange, handleSubmit }) => (
-                <form onSubmit={handleSubmit}>
-                  <input
+                <form onSubmit={handleSubmit} style={{display:"flex",
+                flexDirection:"column",
+                padding:"10px"
+                }}>
+                  <TextField
                     id="email"
                     label="Email"
                     value={values.email}
                     onChange={handleChange}
                     required
+                    style={{marginBottom:"2rem"}}
+                    color="secondary"
+
                   />
-                  <input
+                  <TextField
                     id="password"
-                    label="password"
+                    label="Password"
                     value={values.password}
                     onChange={handleChange}
                     required
+                    style={{marginBottom:"2rem"}}
+                    color="secondary"
+
                   />
                   <Button
                     variant="contained"
@@ -93,7 +104,6 @@ const Login = () => {
                 </form>
               )}
             </Formik>
-          </>
         </Box>
       </Container>
     </>
