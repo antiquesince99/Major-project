@@ -5,5 +5,4 @@ const Home = () => {
     home
   </div>;
 };
-
 export default Home;
