@@ -22,6 +22,10 @@ const pages = [
   {
     name : 'Signup',
     link: '/main/signup'
+  },
+  {
+    name : 'Customizer',
+    link: '/main/customizer'
   }
 ];
 
@@ -37,7 +41,7 @@ const Header = () => {
       <Toolbar style={{display : 'flex' , justifyContent: "space-between" , alignItems: "center"}}>
         <Typography variant="h5">MerchMaker</Typography>
         <div style={{display: 'flex', justifyContent: "space-evenly", width: "20%"}}>
-          {pages.map((page)=>(<Button variant='contained' onClick={e => navigate(page.link)}>{page.name}</Button>))}
+          {pages.map((page)=>(<Button variant='contained' onClick={e => navigate(page.link)} style={{marginRight:"2rem"}}>{page.name}</Button>))}
         </div>
         <div>profile</div>
       </Toolbar>

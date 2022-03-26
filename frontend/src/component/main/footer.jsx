@@ -19,13 +19,13 @@ const Footer = () => {
         <Grid container spacing={2} textAlign="center">
           <Grid item xs={4}  md={4} bgcolor="red">
             About
-            <p>
+            <p style={{padding:"20px"}}>
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis magnam natus provident, alias est iure omnis optio culpa incidunt deleniti explicabo, molestiae illo, officia tempore ad nemo porro. Nemo, reiciendis.
             </p>
           </Grid>
           <Grid item xs={4} md={4} bgcolor="blue">
             Contact
-            <div style={{display:"flex", padding:"15px", justifyContent:"space-evenly"}}>
+            <div style={{display:"flex", padding:"25px", justifyContent:"space-evenly"}}>
               <FacebookIcon></FacebookIcon>
               <YouTubeIcon></YouTubeIcon>
               <RedditIcon></RedditIcon>
