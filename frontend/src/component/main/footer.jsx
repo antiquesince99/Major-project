@@ -36,7 +36,9 @@ const Footer = () => {
           <Grid item xs={4}  md={4} bgcolor="blueviolet">
             Location
             <p>
+              
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, vel. Minus itaque pariatur incidunt sunt nulla magnam aperiam inventore ad. Atque placeat magnam et excepturi architecto vel rerum ab maiores?
+
             </p>
           </Grid> 
         </Grid>
