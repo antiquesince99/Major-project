@@ -1,4 +1,4 @@
-import { Button, Container } from "@mui/material";
+import { Button, Container, TextField } from "@mui/material";
 import React from "react";
 import { Formik } from "formik";
 import app_config from "../../config";
@@ -46,10 +46,10 @@ const Signup = () => {
             height: "50vh",
           }}
         >
-          <Formik initialValues={Registerform} onSubmit={formSubmit}>
+          <Formik initialValues={Registerform} onSubmit={formSubmit} >
             {({ values, handleSubmit, handleChange }) => (
-              <form onSubmit={handleSubmit} style={{display:"flex" , flexDirection:"column" , justifyContent: "center" , alignItems:"center" , margin:"auto"}}>
-                <input
+              <form onSubmit={handleSubmit} style={{display:"flex" , flexDirection:"column" , justifyContent: "center" , alignItems:"center" , margin:"auto" , border:"2px solid black", padding:"5px"}}>
+                <TextField
                   placeholder="FullName"
                   className="form-control"
                   id="fullname"
@@ -59,13 +59,13 @@ const Signup = () => {
                     marginBottom:"2rem",
                     height:"50px",
                     padding:"8px",
-                    borderRadius:"10px",
                     fontSize:"15px",
-
+                    
                   }}
+                  required
                 />
 
-                <input
+                <TextField
                   placeholder="Email"
                   className="form-control"
                   id="email"
@@ -75,13 +75,12 @@ const Signup = () => {
                     marginBottom:"2rem",
                     height:"50px",
                     padding:"8px",
-                    borderRadius:"10px",
                     fontSize:"15px",
 
                   }}
                 />
 
-                <input
+                <TextField
                   className="form-control"
                   placeholder="password"
                   id="password"
@@ -97,6 +96,7 @@ const Signup = () => {
 
                   }}
                   type="password"
+                  required
                 />
                 <Button variant="contained" color="success" type="submit"
                   style={{
@@ -106,7 +106,8 @@ const Signup = () => {
                     borderRadius:"10px",
                     fontSize:"15px",
                     cursor: "pointer"
-                  }}>
+                  }}
+                  required>
                   register
                 </Button>
               </form>
